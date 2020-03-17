@@ -1,0 +1,114 @@
+.checked {
+  color: #ccc;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.fa {
+  margin: 0 5px;
+  color: #bbb;
+}
+
+li>label[for='todo'] {
+  width: 210px;
+}
+
+.m-5{
+  width: 350px;
+  border: 5px solid black;
+  border-radius: 35px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.mb-3{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+
+/* animate */
+
+.wrapper{
+  display: flex;
+  
+}
+.circle-wrapper {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.right{
+    position: relative;
+    width: 10px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.rightcircle{
+    transform : rotate(225deg);
+    width: 20px;
+    height: 20px;
+    border:4px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    right: 0;
+    border-top:3px solid #38B99B;
+    border-right:3px solid #38B99B;
+    animation-name: circle_right; 
+    animation-timing-function: linear; 
+    animation-iteration-count: 1; 
+  
+}
+
+.left{
+    position: relative;
+    width: 10px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.leftcircle{
+    transform : rotate(220deg);
+    width: 20px;
+    height: 20px;
+    border:4px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    right: -10px;
+    border-bottom:3px solid #38B99B;
+    border-left:3px solid #38B99B;
+    animation-name: circle_left;  
+    animation-timing-function: linear; 
+    animation-iteration-count: 1; 
+    
+  
+}
+
+@keyframes circle_right{
+    0%{
+        transform : rotate(45deg);
+    }
+	100%{
+        transform : rotate(225deg);
+    }
+}
+@keyframes circle_left{
+    0%{
+        transform : rotate(40deg);
+    }
+  50%{
+    transform : rotate(40deg);
+  }
+	100%{
+        transform : rotate(225deg);
+    }
+}
